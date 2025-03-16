@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Wealth Shown to Scale</title>
+  <meta name="description" content="German debt visualized." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div class="debt-container">
+    <div class="title-screen">
+      <h1>German Debt Shown to Scale</h1>
+      <div class="scroll-this-way">
+        <span>Scroll Down to Explore</span>
+      </div>
+    </div>
+
+    <div class="title-screen">
+      <div class="jump-to"><span>Or click to jump to a specific section:</span></div>
+      <div class="nav-menu">
+        <button onclick="scrollToSection('interest-year')">German Interest per Year</button>
+        <button onclick="scrollToSection('sondervermoegen')"><em>Sondervermögen</em></button>
+        <button onclick="scrollToSection('planned-infrastructure-debt')">Planned German Infrastructure Debt</button>
+      </div>
+      <div class="nav-menu">
+        <button onclick="scrollToSection('planned-army-debt')">Planned German Army Debt</button>
+        <button onclick="scrollToSection('german-total-debt')">German Total Gov. Debt</button>
+        <button onclick="scrollToSection('german-gdp')">German GDP</button>
+      </div>
+      <div class="nav-menu">
+        <button onclick="scrollToSection('german-governmental-income')">Governmental income 2024</button>
+        <button onclick="scrollToSection('german-governmental-spending')">Governmental spending 2024</button>
+      </div>
+    </div>
+    
+
+    <!-- Debt Bars -->
+    <div class="debt-wrapper">
+    <h2 class="debt-title">€1,000</h2>
+    <div class="debt one-thousand" data-height="1000"></div>
+    <div class="arrow-container">
+      <svg class="arrow" viewBox="0 0 24 24" width="48" height="48">
+        <path d="M10 17l5-5-5-5v10zM0 12h15v-2H0v2z" fill="#ccc"/>
+      </svg>
+    </div>
+  </div>
+
+    <div class="debt-wrapper">
+      <h2 class="debt-title">€1,600 (Germany's interest <em>per second</em> )</h2>
+      <div class="debt one-thousand" data-height="2000"></div>
+      <div class="arrow-container">
+        <svg class="arrow" viewBox="0 0 24 24" width="48" height="48">
+          <path d="M10 17l5-5-5-5v10zM0 12h15v-2H0v2z" fill="#ccc"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="debt-wrapper">
+      <h2 class="debt-title">€25,503 (Debt per German citizen <em>if total governmental debt is split </em>)</h2>
+      <div class="debt one-thousand" data-height="25503"></div>
+    </div>
+
+    <div class="debt-wrapper">
+      <h2 class="debt-title">€31,565 (Average German houshold debt)</h2>
+      <div class="debt one-thousand" data-height="31565"></div>
+
+    <div class="debt-wrapper">
+      <h2 class="debt-title">€44,407 (Median German income)</h2>
+      <div class="debt one-thousand" data-height="44407"></div>
+    </div>
+
+    <div class="debt-wrapper">
+      <h2 class="debt-title">€192,100 (Average German household assets)</h2>
+      <div class="debt one-thousand" data-height="192100"></div>
+    </div>
+
+    <div class="debt-wrapper">
+      <h2 class="debt-title">€1 million</h2>
+      <div class="debt million" data-height="1000000"></div>
+    </div>
+    <div class="debt-wrapper">
+      <h2 class="debt-title">€1 billion</h2>
+      <div class="debt billion" data-height="1000000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="interest-year">
+      <div class="debt-header">
+        <h2 class="debt-title">€49,5 billion (German interest per year)</h2>
+        <button class="back-to-top">⬆ </button>
+      </div>
+      <div class="debt ruler" data-height="49500000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="sondervermoegen">
+      <div class="debt-header">
+        <h2 class="debt-title">€100 billion (<em>Sondervermögen</em> debt for German army)</h2>
+        <button class="back-to-top" onclick="scrollToTop()">⬆</button>
+      </div>
+      <div class="debt ruler" data-height="100000000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="planned-infrastructure-debt">
+    <div class="debt-header">
+      <h2 class="debt-title">€500 billion (<em>planned additional debt for infrastructure</em>)</h2>
+      <button class="back-to-top">⬆ </button>
+    </div>
+      <div class="debt ruler" data-height="500000000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="planned-army-debt">
+      <div class="debt-header">
+        <h2 class="debt-title">€500 billion (<em> rumored next <em>Sondervermögen</em> for German army</em>)</h2>
+        <button class="back-to-top">⬆ </button>
+      </div>
+      <div class="debt ruler" data-height="500000000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="german-governmental-income">
+      <div class="debt-header">
+        <h2 class="debt-title">€1,4 trillion (German governmental income 2024)</h2>
+        <button class="back-to-top">⬆ </button>
+      </div>
+      <div class="debt trillion" data-height="1405800000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="german-governmental-spending">
+      <div class="debt-header">
+        <h2 class="debt-title">€1,51 trillion (German governmental spending 2024)</h2>
+        <button class="back-to-top">⬆ </button>
+      </div>
+      <div class="debt ruler" data-height="1405800000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="german-total-debt">
+      <div class="debt-header">
+        <h2 class="debt-title">€2,11 trillion (current (15th March 2025) German total debt (<em>excl. planned Sondervermögen</em>))</h2>
+        <button class="back-to-top">⬆ </button>
+      </div>
+      <div class="debt ruler" data-height="2110000000000"></div>
+    </div>
+
+    <div class="debt-wrapper" id="german-gdp">
+      <div class="debt-header">
+      <h2 class="debt-title">€3,47 trillion (German GDP)</h2>
+      <button class="back-to-top">⬆ </button>
+      </div>
+      <div class="debt trillion" data-height="3470000000000"></div>
+    </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
