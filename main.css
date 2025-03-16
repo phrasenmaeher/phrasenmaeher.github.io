@@ -100,6 +100,25 @@ body, html {
   white-space: nowrap; /* Prevents wrapping */
 }
 
+.billion-marker{
+  position: absolute;
+  right: -20px;
+  width: 20px;
+  height: 5px;
+  background-color: black;
+}
+
+.billion-marker-label {
+  position: absolute;
+  left: 100%; /* Moves the label completely to the left of the marker */
+  transform: translateX(25px); /* Fine-tune spacing */
+  font-size: 15px;
+  color: black;
+  text-align: right; /* Ensures text grows to the left */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+
 .nav-menu {
   display: flex;
   justify-content: center;
