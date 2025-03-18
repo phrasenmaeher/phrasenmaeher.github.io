@@ -35,9 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const billionMarkerCount = 500 // goes up to 10 billion
             for (let i = 1; i <= billionMarkerCount; i++) { // Place a marker every 1 billion
 
-
               const billionMarkerPosition = i * billionMarkerSpacing;
-              if (billionMarkerPosition < height) {
+              if (billionMarkerPosition <= height) {
                 const billionMarker = document.createElement("div");
                 billionMarker.classList.add("billion-marker");
 
